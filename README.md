@@ -1,224 +1,123 @@
-# The Cayman Blog theme
+# no style, please!
 
-[![Build Status](https://travis-ci.org/lorepirri/cayman-blog.svg?branch=master)](https://travis-ci.org/lorepirri/cayman-blog) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman-blog.svg)](https://badge.fury.io/rb/jekyll-theme-cayman-blog)
+<img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/logo.png" width="64" align="left" />A (nearly) no-CSS, fast, minimalist [Jekyll](https://jekyllrb.com/) theme.
+Inspired by [elly's site](http://tilde.town/~elly/), expressly created for [my personal blog](https://riggraz.dev/).
 
-*Cayman Blog is a Jekyll theme for GitHub Pages. It is based on the nice [Cayman theme](https://pages-themes.github.io/cayman/), with blogging features added. You can [preview the theme to see what it looks like](http://lorepirri.github.io/cayman-blog), or even [use it today](#usage).*
+<h3 align="center"><a href="https://riggraz.dev/no-style-please/">Try the demo out!</a></h3>
 
-<img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail.png" alt="Thumbnail of cayman-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail-mobile.gif" alt="Thumbnail of cayman-blog for mobile" style="max-width:30%;"/>
+<img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/featured-image.png" />
 
-## Install
+## Features
 
-Cayman Blog Theme has been developed as a Jekyll theme gem for easier use. It is also 100% compatible with GitHub Pages — just with a more involved installation process according to whether you’re _running Jekyll v3.3+ and self-hosting_, or if you’re *hosting with GitHub Pages*.
+* Fast (**1kb of CSS!** For more information on performance and more, see [Page Speed Insights report](https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/page-speed-insights-report.png) and [Lighthouse report](https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/lighthouse-report.png))
+* Light, dark and auto modes
+* Responsive
+* Content first (typography optimized for maximum readability)
+* SEO optimized (uses [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag))
+* RSS feed (uses [Jekyll Feed](https://github.com/jekyll/jekyll-feed))
+* Fully compatible with [GitHub Pages](https://pages.github.com/) (see [GitHub Pages installation](#github-pages-installation))
 
-## Self hosting
+## Installation
 
-If you’re running Jekyll v3.3+ and **self-hosting** you can quickly install the theme as Ruby gem:
+If you haven't already created your blog using Jekyll, follow the [instructions](https://jekyllrb.com/docs/) to do so from Jekyll's documentation.
 
-1. Add this line to your Jekyll site’s Gemfile:
+NOTE: if you are using Jekyll with GitHub Pages, see the [GitHub Pages installation section](#github-pages-installation).
 
-    ```
-    gem "jekyll-theme-cayman-blog"
-    ```
-
-2. Add this line to your Jekyll site’s _config.yml file:
-
-    ```
-    theme: jekyll-theme-cayman-blog
-    ```
-
-3. Then run Bundler to install the theme gem and dependencies:
-
-    ```
-    script/bootstrap
-    ```
-
-## Hosting with GitHub Pages
-
-If you’re *hosting your blog with GitHub Pages* you’ll have to consider this:
-
-:warning: As stated in the official [Jekyll documentation](https://jekyllrb.com/docs/themes/#installing-a-theme):
-
-> If you’re publishing your Jekyll site on [GitHub Pages](https://pages.github.com/), note that GitHub Pages supports only some gem-based themes. See [Supported Themes](https://pages.github.com/themes/) in GitHub’s documentation to see which themes are supported.
-
-Therefore, this theme, as well as many others, can not be installed in the same way as the ones officially supported by GitHub Pages (e.g. Cayman, Minima), a bit more effort has to be put on.
-
-The easiest way I found to install _Cayman Blog Theme_, is [installing the theme gem](gem-install), and then [converting the gem-based theme to regular theme](https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes).
-
-Alternatively, for new projects, one could fork the whole theme, and keep only the interesting files.
-
-
-### Gem Install
-
-This method is preferred for existing _Jekyll blogs_, as well as newly created ones. Notice that the files `index.md`, `about.md`, `contact.md` will be overwritten (only `index.md` is really needed, the other two are just placeholders).
-
-1. Install the theme gem: ` $ gem install jekyll-theme-cayman-blog`
-3. Run `$ gem env gemdir` to know where the gem was installed
-4. Open the folder shown in the output
-5. Open the folder `gems`
-5. Open the theme folder (e.g. `jekyll-theme-cayman-blog-0.0.5`)
-6. Copy all the files into your newly created or existing blog folder    
-7. Leave empty `theme` your site's `_config.yml`:
-
-    ```yml
-    theme:
-    ```
-6. Modify `_config.yml`, `about.md`, `contact.md` for your project
-7. [Customize the theme](customizing)
-
-### Install as a Fork
-
-1. [Fork the repo](https://github.com/lorepirri/cayman-blog)
-2. Clone down the repo with `$ git clone git@github.com:username/reponame.git`
-3. Delete the `screenshot.png` and `screenshot-mobile.png` files
-3. Empty the `_posts` folder
-4. Install bundler and gems with `$ script/bootstrap`
-5. Run Jekyll with `$ bundle exec jekyll serve`
-6. Modify `_config.yml`, `about.md`, `contact.md`, and `now.md` for your project
-7. [Customize the theme](customizing)
-
-## Customizing
-
-### Configuration variables
-
-Cayman Blog will respect the following variables, if set in your site's `_config.yml`:
-
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
-```
-
-Additionally, you may choose to set the following optional variables:
-
-```yml
-show_downloads: ["true" or "false" to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
-```
-
-### RSS feeds
-
-To enable RSS feeds and also make visible an RSS feeds button in the footer, the [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) must be installed.
-
-Add this line to your site's Gemfile:
+Then, to style your blog with this theme, add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem 'jekyll-feed'
+gem "no-style-please"
 ```
 
-And then add this line to your site's `_config.yml`:
+And add this line to your Jekyll site's `_config.yml`:
 
-```yml
-plugins:
-  - jekyll-feed
+```yaml
+theme: no-style-please
 ```
 
-:warning: If you are using Jekyll < 3.5.0 use the `gems` key instead of `plugins`.
+And then execute:
 
-For more information about configuring this plugin, see the official [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) page.
+    $ bundle
 
-### SEO tags
+Or install it yourself as:
 
-Cayman Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
+    $ gem install no-style-please
 
-The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
+### GitHub Pages installation
 
-To switch to a better SEO tags however, one should install [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag):
+If you want to use this theme for your Jekyll's site deployed on [GitHub Pages](https://pages.github.com/), follow the instructions on [this page](https://docs.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme).
 
-1. Add this line to your site's Gemfile:
+## Usage
 
-    ```ruby
-    gem 'jekyll-seo-tag'
-    ```
+You can edit `_config.yml` file to customize your blog. You can change things such as the name of the blog, the author, the appearance of the theme (light, dark or auto), how dates are formatted, etc. Customizable fields should be straightforward to understand. Still, `_config.yml` contains some comments to help you understand what each field does.
 
-2. And then add this line to your site's `_config.yml`:
+For further customization (e.g. layout, CSS) see the [official Jekyll's documentation](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) on customizing gem-based themes.
 
-    ```yml
-    plugins:
-      - jekyll-seo-tag
-    ```
+### Customize the menu
 
-3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
+In order to add/edit/delete entries from the main menu, you have to edit the `menu.yml` file inside `_data` folder. Through that file you can define the structure of the menu. Take a look at the default configuration to get an idea of how it works and read on for a more comprehensive explanation.
 
-      ```liquid
-      {% seo %}
-      ```
+The `menu.yml` file accepts the following fields:
 
-For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
+- `entries` define a new unordered list that will contain menu entries
+- each entry is marked by a `-` at the beginning of the line
+- each entry can have the following attributes:
+    - `title`, which defines the text to render for this menu entry (**NB: you can also specify HTML!**)
+    - `url`, which can be used to specify an URL for this entry. If not specified, `title` will be rendered as-is; otherwise `title` will be sorrounded by a link tag pointing to the specified URL. Note that the URL can either be relative or absolute. Also note that you can get the same result by placing an ```<a>``` tag in the `title` field.
+    - `post_list`, which can be set either to `true` or to an object. If it is true, the entry will have a list of all posts as subentries. This is used to render your post list. If you want to customize which posts to render (e.g. by category), you can add one or more of the following attributes under `post_list`:
+        - `category`, which can be set to a string. It is used to render a list of posts of the specified category only. If you don't set it, then posts of all categories will be rendered.
+        - `limit`, which can be set to a number. It specifies the number of posts to show. If not set, all posts will be rendered.
+        - `show_more`, which can be true. If it is true and if the number of posts to show is greater than the specified `limit`, render a link to another page. To specify the URL and the text of the link, you can set `show_more_url` and `show_more_text` attributes, which are documented below.
+        - `show_more_url`, which can be a string. It specifies the URL for the show more link. Use only if `show_more` is true. This will usually redirect to a page containing all posts, which you can easily create using an archive page (see [create archive pages](#create-archive-pages) section)
+        - `show_more_text`, which can be a string. It specifies the text for the show more link. Use only if `show_more` is true.
+    - `entries`, yes, you can have entries inside entries. In this way you can create nested sublists!
 
+### Create archive pages
 
-### Stylesheet
+A so-called archive page is a page that shows a list of posts (see [this](https://riggraz.dev/no-style-please/all-posts) for an example). You can create an archive page by creating a page and putting the following frontmatter:
 
-If you'd like to add your own custom styles:
-
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
-
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
-
-*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
-
-### Layouts
-
-If you'd like to change the theme's HTML layout:
-
-1. [Copy the original template](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/default.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
-
-### Sass variables
-
-If you'd like to change the theme's [Sass variables](https://github.com/lorepirri/cayman-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
-
-```scss
-$section-headings-color: #0086b3;
-
-@import "{{ site.theme }}";
+```
+---
+layout: archive
+title: The title of the page here
+which_category: name-of-category
+---
 ```
 
-### Overriding GitHub-generated URLs
+`which_category` is optional: if you don't put it, then all posts of the blog will be listed; on the other hand, if you specify a category, only posts of that category will be shown.
 
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
+This feature is particularly useful if used together with the `show_more` attribute in the menu. For example, if you want to limit the number of posts shown in the home page to 5 but add a link to view them all, then you can create an archive page using the method showed above and link to it using the `show_more_url` attribute in `menu.yml`. See [this example](https://github.com/riggraz/no-style-please/blob/master/_data/menu.yml) if you're in doubt.
 
-1. Look at [the template source](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
+### Customize the index page
 
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+The `index.md` page should use layout `home`, which is the layout that displays the menu. If you want to have some content after the menu, you can just add that content in the `index.md` file, and it will automatically show under the menu.
 
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
+Another thing you can do to customize the index page is show the description of your blog between the title and the menu. To do this, just edit `_config.yml` and change `theme_config.show_description` to `true`.
 
-## Roadmap
+### Pro tips
 
-See the [open issues](https://github.com/lorepirri/cayman-blog/issues) for a list of proposed features (and known issues).
+#### Dark mode for images
 
-## Project philosophy
+This theme provides dark mode by inverting all colors of light mode throught the CSS `invert()` function. This approach would also invert the color of all images, but, since this is not the behaviour one would expect, images are not inverted by default.
 
-The Cayman Blog theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+However, if you would like to force the color inversion on a specific image you can do so by applying `class="ioda"` to that image ("ioda" stands for "invert on dark appearance"). See the image in the [overview post](https://github.com/riggraz/no-style-please/blob/master/_posts/2020-07-07-overview-post.md) for an example of this approach. Note that color inversion will take place only when the theme has dark appearance!
+
+For example, if you have a black and white image it could make sense to invert it in dark mode. On the other hand, a colorful image will probably look bad if inverted.
 
 ## Contributing
 
-Interested in contributing to Cayman Blog? We'd love your help. Cayman Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+Bug reports and pull requests are welcome on GitHub at https://github.com/riggraz/no-style-please. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-### Previewing the theme locally
+## Development
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
+To set up your environment to develop this theme, run `bundle install`.
 
-1. Clone down the theme's repository (`git clone https://github.com/lorepirri/cayman-blog`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-### Running tests
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `no-style-please.gemspec` accordingly.
 
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
