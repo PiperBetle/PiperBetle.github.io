@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: VScode	"
+title: "Tag: VScode"
 tag: VScode
 ---
