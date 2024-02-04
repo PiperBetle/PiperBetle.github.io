@@ -11,15 +11,8 @@
   {% if site.tags != "" %}
     {% include collecttags.html %}
   {% endif %}
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script> 
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']],
-      processEscapes: true
-    }
-  };
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
   {%- include custom-head.html -%}
   
 </head>
