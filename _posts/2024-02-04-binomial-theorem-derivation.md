@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "对二项式定理求导"
-tags: 数学
+tags: 笔记 数学
 ---
 
 $$

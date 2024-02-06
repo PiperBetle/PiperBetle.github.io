@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "错排"
-tags: 数学
+tags: 笔记 数学
 ---
 
 # 定义
