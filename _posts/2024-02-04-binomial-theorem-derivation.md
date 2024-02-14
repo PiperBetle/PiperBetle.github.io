@@ -7,7 +7,6 @@ tags: 笔记 数学
 $$
 \begin{aligned}
 (x+1)^n&=\sum_{i=0}^n\binom nix^i\\
-(x+1)^n&=\sum_{i=0}^n\binom nix^i\\
 ((x+1)^n)'&=(\sum_{i=0}^n\binom nix^i)'\\
 n(x+1)^{n-1}&=\sum_{i=0}^n\binom niix^{i-1}\\
 2^{n-1}n&=\sum_{i=0}^ni\binom ni
