@@ -73,4 +73,7 @@ minima:
   #  - { platform: x,              user_url: "https://x.com/jekyllrb" }
   #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
+paginate: 10
+paginate_path: "blog/page:num"
 
+show_excerpts: true
