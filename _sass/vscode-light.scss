@@ -1,0 +1,89 @@
+.highlight {
+
+  .c,
+  .cm,
+  .c1,
+  .cs {
+    color: #008000;
+  }
+
+  .n,
+  .na,
+  .nc,
+  .no,
+  .ni,
+  .ne,
+  .nf,
+  .nn,
+  .nt,
+  .nv,
+  .nf,
+  .vc,
+  .vg,
+  .vi {
+    color: #001080;
+    font-weight: normal;
+  }
+
+  .nb,
+  .kt,
+  .ow {
+    color: #0000ff;
+    font-weight: normal;
+  }
+
+  .cpf {
+    color: #A31515;
+  }
+
+  .p,
+  .o {
+    color: #795E26;
+    font-weight: normal;
+  }
+
+  .cp,
+  .k,
+  .kc,
+  .kd,
+  .kp,
+  .kr {
+    color: #AF00DB;
+    font-weight: normal;
+  }
+
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .il,
+  .mo {
+    color: #098658;
+  }
+
+  .s,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+    color: #a31515;
+  }
+}
+
+.highlighter-rouge .highlight {
+  background: #fff
+}
+
+code {
+  tab-size: 4;
+  font-family: "Fira Code", "Inconsolata", "Consolas", "Menlo", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+  background-color: #fff;
+  font-size: 14px;
+}
