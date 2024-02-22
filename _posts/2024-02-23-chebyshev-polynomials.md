@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "普通生成函数"
+title: "切比雪夫多项式"
 tags: 笔记 数学
 ---
 

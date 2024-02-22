@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "普通生成函数"
+title: "有无标号球盒计数问题"
 tags: 笔记 数学
 ---
 
