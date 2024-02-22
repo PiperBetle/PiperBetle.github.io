@@ -6,7 +6,7 @@ tags: 笔记 数学
 
 切比雪夫多项式的最初根源其实是从 $\cos$ 的多倍角公式，但其优秀性质却被用在了多项式绝对值最大值中的最小值。
 
-|n|$\cos$|$T_n$|
+|$n$|$\cos$|$T_n$|
 |:-:|:-:|:-:|
 |$0$|$\cos0$|$T_0=1$|
 |$1$|$\cos\theta=\cos\theta$|$T_1=x$|
@@ -18,7 +18,6 @@ tags: 笔记 数学
 
 因为是 $\theta$ 的和角，所以 $T_n$ 的第 $i$ 个根是 $\cos(\frac{2i-1}{2n}\pi)$。  
 同理还可以得出 $T_n$ 在 $[-1,1]$ 中有 $n+1$ 个极值点 $x_i=\cos(\frac in\pi),i\in[0,n]\cap\mathbb Z$，并且 $T_n(x_i)=(-1)^i$。
-
 
 性质：首项系数为 $1$ 的 $n$ 次多项式 $f(x)$ 一定存在 $x_0\in[-1,1]$ 满足 $\vert f(x)\vert\ge\frac1{2^{n-1}}$。  
 证明可以采取反证法，设 $F(x)=2^{n-1}f(x)$，那么假设 $\vert F(x)\vert<1$。  
@@ -35,7 +34,8 @@ $$
 $$
 
 $$
-\frac{\vert I\vert}2\ge2^{1-2n}\vert a\vert\vert D\vert^n$$
+\frac{\vert I\vert}2\ge2^{1-2n}\vert a\vert\vert D\vert^n
+$$
 
 取等条件为 $f(x)$ 是 $T_n(x)$ 经过平移伸缩使得定义域为 $D$ 的函数。
 
