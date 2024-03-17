@@ -7,8 +7,8 @@ tags: 笔记 数学
 ### 前置知识
 期望 $E[X]$ 即概率的加权平均。  
 期望具有线性，$E[ax+b]=aE[x]+b$。  
-方差 $Var(x)=E[X^2]-E^2[x]$。  
-类似的，$Var(ax+b)=a^2Var(x)$。
+方差 $Var[x]=E[X^2]-E^2[x]$。  
+类似的，$Var[ax+b]=a^2Var[x]$。
 
 ### 二项随机变量
 #### 定义
@@ -60,7 +60,7 @@ E[X^2]=npE[(Y+1)^1]=np((n-1)p+1)
 $$
 
 $$
-Var(x)=np((n-1)p+1)-(np)^2=np(1-p)
+Var[x]=np((n-1)p+1)-(np)^2=np(1-p)
 $$
 
 ### 泊松随机变量
@@ -96,7 +96,7 @@ $$
 
 不过以上都是用泊松随机分布算出的近似解。实际上，只要满足各个事件发生的概率较小，并且独立（或者弱相关），就可以看作泊松随机分布。
 #### 期望、方差
-根据二项随机变量的猜测，$E[X]=np=\lambda$，$Var(X)=np(1-p)\approx np=\lambda$，也就是说 $E[X]=Var[X]=\lambda$？确实如此，接下来证明。
+根据二项随机变量的猜测，$E[X]=np=\lambda$，$Var[X]=np(1-p)\approx np=\lambda$，也就是说 $E[X]=Var[X]=\lambda$？确实如此，接下来证明。
 
 $$
 \begin{aligned}
@@ -124,7 +124,7 @@ E[X^2]&=\sum_{i=0}^\infty\frac{i^2e^{-\lambda}\lambda^i}{i!}\\
 $$
 
 $$
-Var(X)=E[X^2]-E^2[X]=\lambda(\lambda+1)-\lambda^2=\lambda
+Var[X]=E[X^2]-E^2[X]=\lambda(\lambda+1)-\lambda^2=\lambda
 $$
 
 ### 几何随机变量
@@ -174,7 +174,7 @@ E[X^2]=\frac{2q+p}{p^2}=\frac{q+1}{p^2}
 $$
 
 $$
-Var(X)=\frac{q+1}{p^2}-\frac1{p^2}=\frac{1-p}{p^2}
+Var[X]=\frac{q+1}{p^2}-\frac1{p^2}=\frac{1-p}{p^2}
 $$
 
 ### 负二项随机变量
@@ -218,7 +218,7 @@ E[X^2]=\frac rpE[Y-1]=\frac rp(\frac{r+1}p-1)
 $$
 
 $$
-Var(X)=\frac rp(\frac{r+1}p-1)-(\frac rp)^2=\frac{r(1-p)}{p^2}
+Var[X]=\frac rp(\frac{r+1}p-1)-(\frac rp)^2=\frac{r(1-p)}{p^2}
 $$
 
 ### 超几何随机变量
@@ -261,5 +261,5 @@ $$
 令 $p=\frac mN$
 
 $$
-Var(X)=np(1-p)(1-\frac{n-1}{N-1})
+Var[X]=np(1-p)(1-\frac{n-1}{N-1})
 $$
