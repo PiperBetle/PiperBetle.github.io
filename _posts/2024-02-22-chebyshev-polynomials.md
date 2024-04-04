@@ -19,10 +19,10 @@ tags: 笔记 数学
 因为是 $\theta$ 的和角，所以 $T_n$ 的第 $i$ 个根是 $\cos(\frac{2i-1}{2n}\pi)$。  
 同理还可以得出 $T_n$ 在 $[-1,1]$ 中有 $n+1$ 个极值点 $x_i=\cos(\frac in\pi),i\in[0,n]\cap\mathbb Z$，并且 $T_n(x_i)=(-1)^i$。
 
-性质：首项系数为 $1$ 的 $n$ 次多项式 $f(x)$ 一定存在 $x_0\in[-1,1]$ 满足 $|f(x)|\ge\frac1{2^{n-1}}$。  
-证明可以采取反证法，设 $F(x)=2^{n-1}f(x)$，那么假设 $|F(x)|<1$。  
+性质：首项系数为 $1$ 的 $n$ 次多项式 $f(x)$ 一定存在 $x_0\in[-1,1]$ 满足 $\vert f(x)\vert\ge\frac1{2^{n-1}}$。  
+证明可以采取反证法，设 $F(x)=2^{n-1}f(x)$，那么假设 $\vert F(x)\vert<1$。  
 $F(x)-T_n(x)$ 是个 $n-1$ 次的多项式，因为第 $n$ 次被抵消了。  
-$x=\cos(\frac in\pi),i\in[0,n]\cap\mathbb Z$ 时，$T_n(x)$ 的取值在 $1$ 和 $-1$ 中交替变换。因为 $|F(x)|<1$，所以 $F(x)-T_n(x)$ 的符号由 $T_n$ 来决定，相邻两项的符号也交替变换，$n+1$ 个 $x_i$ 带来了 $n$ 个零点。  
+$x=\cos(\frac in\pi),i\in[0,n]\cap\mathbb Z$ 时，$T_n(x)$ 的取值在 $1$ 和 $-1$ 中交替变换。因为 $\vert F(x)\vert<1$，所以 $F(x)-T_n(x)$ 的符号由 $T_n$ 来决定，相邻两项的符号也交替变换，$n+1$ 个 $x_i$ 带来了 $n$ 个零点。  
 $F(x)-T_n(x)$ 这个 $n-1$ 次多项式存在 $n$ 个零点，这只能说明 $F(x)=T_n(x)$ 恒成立。  
 但是必然存在 $x$ 使得 $T_n=1$ 成立，但是我们已经假设 $F(x)<1$ 了，产生矛盾，假设不成立。  
 带入 $T_n$，得到当 $f(x)$ 是 $T_n$ 时取等。
@@ -30,11 +30,11 @@ $F(x)-T_n(x)$ 这个 $n-1$ 次多项式存在 $n$ 个零点，这只能说明 $F
 对上面的性质进行平移伸缩可以得到这个结论：若 $f(x)$ 为 $n$ 次多项式，其最高项为 $ax^n$，定义域为 $D$，值域为 $I$，则
 
 $$
-\min_{x\in D}|f(x)|_{\max}=\frac{|I|}2=2^{1-2n}|a||D|^n
+\min_{x\in D}\vert f(x)\vert_{\max}=\frac{\vert I\vert}2=2^{1-2n}\vert a\vert\vert D\vert^n
 $$
 
 $$
-\frac{|I|}2\ge2^{1-2n}|a||D|^n
+\frac{\vert I\vert}2\ge2^{1-2n}\vert a\vert\vert D\vert^n
 $$
 
 取等条件为 $f(x)$ 是 $T_n(x)$ 经过平移伸缩使得定义域为 $D$ 的函数。
@@ -43,21 +43,21 @@ $$
 
 ---
 
-$f(x)=2x^2+bx+c$，当 $x\in[0,2]$ 时，求 $\min|f(x)|_{\max}$。
+$f(x)=2x^2+bx+c$，当 $x\in[0,2]$ 时，求 $\min\vert f(x)\vert_{\max}$。
 
 $$
 \begin{aligned}
-\min|f(x)|_{\max}&=2^{1-2n}|a||D|^n\\
-&=2^{1-2\times2}|2|2^2\\
+\min\vert f(x)\vert_{\max}&=2^{1-2n}\vert a\vert\vert D\vert^n\\
+&=2^{1-2\times2}\vert2\vert2^2\\
 &=1
 \end{aligned}
 $$
 
 ---
 
-$f(x)=x^2+ax+b-2$ 在 $x\in[1,3]$ 上 $|f(x)|\le\frac12$ 恒成立，求 $a,b$。
+$f(x)=x^2+ax+b-2$ 在 $x\in[1,3]$ 上 $\vert f(x)\vert\le\frac12$ 恒成立，求 $a,b$。
 
-注意到 $\min|f(x)|_{\max}=2^{1-2n}|a||D|^n=\frac12$，所以 $a,b-2$ 就是 $T_2$ 的 $1,0$ 次项系数。  
+注意到 $\min\vert f(x)\vert_{\max}=2^{1-2n}\vert a\vert\vert D\vert^n=\frac12$，所以 $a,b-2$ 就是 $T_2$ 的 $1,0$ 次项系数。  
 为了取等，得把 $T_2$ 的定义域右移 $2$，同时为了使最高项系数 $[x^2]T_2=2$ 与 $[x^2]f(x)=1$ 对应 还要乘 $\frac12$。  
 也就是说，$f(x)=\frac12T_2(x-2)$，展开后解出 $a=-4,b=\frac{11}2$ 即可。
 
@@ -67,16 +67,16 @@ $f(x)=ax^2+bx+c$，当 $0\le x\le\frac12$ 时，$f(x)\in[2,4]$，求 $a_{\max}$�
 
 $$
 \begin{aligned}
-\frac{|I|}2&\ge2^{1-2n}|a||D|^n\\
-\frac{4-2}2&\ge2^{1-2\times2}|a|(\frac12)^2\\
-|a|&\le32\\
+\frac{\vert I\vert}2&\ge2^{1-2n}\vert a\vert\vert D\vert^n\\
+\frac{4-2}2&\ge2^{1-2\times2}\vert a\vert (\frac12)^2\\
+\vert a\vert&\le32\\
 a_{\max}&=32
 \end{aligned}
 $$
 
 ---
 
-$f(x)=ax^2+bx+c$，对于任意 $x\in[0,1]$ 满足 $|f(x)|\le1$，求 $|a|+|b|+|c|$ 的最大值。  
+$f(x)=ax^2+bx+c$，对于任意 $x\in[0,1]$ 满足 $\vert f(x)\vert\le1$，求 $\vert a\vert+\vert b\vert+\vert c\vert $ 的最大值。  
 
 不妨把 $a,b,c$ 用 $3$ 个 $f(x)$ 去表示出来，这里选取 $0,\frac12,1$。
 
@@ -84,19 +84,19 @@ $f(x)=ax^2+bx+c$，对于任意 $x\in[0,1]$ 满足 $|f(x)|\le1$，求 $|a|+|b|+|
 - $b=-f(1)+4f(\frac12)-3f(0)$
 - $c=f(0)$ 
 
-由于绝对值的性质 $|x+y|\le|x|+|y|$，所以 $|a|+|b|+|c|\le2|f(1)|+4|f(\frac12)|+2|f(0)|+|f(1)|+4|f(\frac12)|+3|f(0)|+|f(0)|$。  
-因为 $|f(x)|\le1$，所以 $|a|+|b|+|c|\le17$。  
-为了使等号成立，要使 $|f(0)|=|f(\frac12)|=|f(1)|=1$ 成立。  
+由于绝对值的性质 $\vert x+y\vert\le\vert x\vert+\vert y\vert $，所以 $\vert a\vert+\vert b\vert+\vert c\vert\le2\vert f(1)\vert+4\vert f(\frac12)\vert+2\vert f(0)\vert+\vert f(1)\vert+4\vert f(\frac12)\vert+3\vert f(0)\vert+\vert f(0)\vert $。  
+因为 $\vert f(x)\vert\le1$，所以 $\vert a\vert+\vert b\vert+\vert c\vert\le17$。  
+为了使等号成立，要使 $\vert f(0)\vert =\vert f(\frac12)\vert =\vert f(1)\vert =1$ 成立。  
 这个时候想起了切比雪夫多项式的极值点，所以先去根据定义域和值域构造切比雪夫多项式 $g(x)=T_2(2x-1)=8x^2-8x+1$。  
-观察到 $0,\frac12,1$ 恰好是 $|g(x)|=1$ 的解，上面的三个数并不是随便选取的。  
-因为是极值点，所以 $|f(0)|=|f(\frac12)|=|f(1)|=1$ 成立，等号可以取到，即 $(|a|+|b|+|c|)_{\max}=17$。
+观察到 $0,\frac12,1$ 恰好是 $\vert g(x)\vert =1$ 的解，上面的三个数并不是随便选取的。  
+因为是极值点，所以 $\vert f(0)\vert =\vert f(\frac12)\vert =\vert f(1)\vert =1$ 成立，等号可以取到，即 $(\vert a\vert+\vert b\vert+\vert c\vert )_{\max}=17$。
 
 不过可以这么做的充分条件是 $D$ 上不变号。  
 证明可以采取拉格朗日插值法插出多项式，如果变号就不能满足极值点正负交替的性质，也就是说无法取等，还存在比切比雪夫多项式更小的系数绝对值之和。
 
 ---
 
-$|x^2+px+q|\le2$ 在 $x\in[1,5]$ 上恒成立，求 $\sqrt{p^2+q^2}$ 值。
+$\vert x^2+px+q\vert\le2$ 在 $x\in[1,5]$ 上恒成立，求 $\sqrt{p^2+q^2}$ 值。
 
-注意到 $\min|f(x)|_{\max}=2^{1-2n}|a||D|^n=2$，所以 $f(x)$ 是 $T_2$ 经过平移伸缩后的函数。  
+注意到 $\min\vert f(x)\vert _{\max}=2^{1-2n}\vert a\vert\vert D\vert^n=2$，所以 $f(x)$ 是 $T_2$ 经过平移伸缩后的函数。  
 平移定义域得到 $f(x)=2T_2(\frac{x-3}2)=x^2-6x+7$，所以 $\sqrt{p^2+q^2}=\sqrt{85}$。
