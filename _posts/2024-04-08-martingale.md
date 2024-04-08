@@ -4,6 +4,8 @@ title: "鞅"
 tags: 笔记 数学
 ---
 
+{% raw %}
+
 ### 鞅
 称随机变量序列 $Z_0,Z_1,\cdots$ 是关于 $X_0,X_1,\cdots$ 的鞅，如果对于所有 $n\ge0$，下列条件成立。
 - $Z_n$ 是 $X_0,X_1,\cdots,X_n$ 的函数
@@ -143,3 +145,5 @@ $$
 $$
 \mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-\lambda^2}{{2\sum_{i=1}^t}c_i^2}\right)\\
 $$
+
+{% endraw %}
