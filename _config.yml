@@ -30,6 +30,7 @@ plugins:
 header_pages:
   - about.md
   - post.html
+  - symbol.md
   - tag.html
 
 # Set to `true` to show excerpts on the homepage.
