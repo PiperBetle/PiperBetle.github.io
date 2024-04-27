@@ -146,4 +146,41 @@ $$
 \mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-\lambda^2}{{2\sum_{i=1}^t}c_i^2}\right)\\
 $$
 
+如果所有的 $c$ 都一样
+
+$$
+\mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-\lambda^2}{2tc^2}\right)\\
+$$
+
+或者可以写成
+
+$$
+\mathbb P(\vert X_t-X_0\vert\ge\lambda\sqrt t)\le2\exp\left(\frac{-\lambda^2}{2c^2}\right)\\
+$$
+
+### 杜布鞅
+
+杜布鞅是用如下方法构造的鞅：$X_0,X_1,\cdots,X_n$ 是随机变量序列，$Y$ 是随机变量且 $\mathbb E[Y]<\infty$，$Z_i=\mathbb E[Y\vert X_0,X_1,\cdots,X_i]$。  
+证明 $Z_i$ 是鞅：
+
+$$
+\begin{aligned}
+E[Z_{i+1}\vert X_0,X_1,\cdots,X_i]&=\mathbb E[\mathbb E[Y\vert X_0,X_1,\cdots,X_{i+1}]\vert X_0,X_1,\cdots,X_i]\\
+&=\mathbb E[Y\vert X_0,X_1,\cdots,X_i]=Z_i
+\end{aligned}
+$$
+
+在大多数应用中，为了方便计算一般取 $Z_0=\mathbb E[Y]$。  
+形象来看，我们把 $Y$ 当成是 $X_0,X_1,\cdots,X_n$ 的函数，起初我们对 $Y$ 一无所知，在获取 $X_i$ 时，我们也就获得了更多关于 $Y$ 的信息，$Z_i$ 就是利用了 $X_0,X_1,\cdots,X_i$ 的信息后，$Y$ 的期望。  
+
+比如说随机图 $G_{n,p}$，以某个顺序排出其 $\binom n2$ 条边。令 $X_i=1$ 表示位置 $i$ 上存在边（这个概率为 $p$），那么关于 $X$ 的函数就是鞅。比如说其最大独立集大小 $\alpha(G)$，其着色数最小值 $\chi(G)$ 均是鞅。这种每次揭示一条边的鞅成为边暴露鞅。  
+类似的，每次揭示一个顶点相邻的点的集合，这种方式构造的鞅是顶点暴露鞅。换句话说，以某个顺序排出其 $n$ 个点，$X_i$ 是排列中前 $i$ 个点的导出子图，关于 $X_i$ 的函数是顶点暴露鞅。
+
+运用杜布鞅可以快速算出随机图着色数偏离期望的一个界。  
+随机图 $G_{n,p}$ 的着色数最小值 $\chi(G)$ 是点暴露鞅。记 $G_i$ 表示前 $i$ 个点的随机子图，$Z_i=\mathbb E[\chi(G)\vert G_1,G_2\cdots,G_i]$。考虑每次加点的过程中，一个顶点最多染一个颜色，所以 $\vert Z_i-Z_{i-1}\vert\le1$，运用吾妻不等式可以得到：
+
+$$
+\mathbb P(\vert \chi(G)-\mathbb E[\chi(G)]\vert\ge\lambda\sqrt n)\le2\mathrm e^{-2\lambda}
+$$
+
 {% endraw %}

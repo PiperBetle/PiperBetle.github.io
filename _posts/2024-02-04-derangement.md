@@ -36,17 +36,17 @@ d_n&=\sum_{k=0}^n(-1)^k\binom nk(n-k)!\\
 \end{aligned}
 $$
 
-对 $e^{-1}$ 泰勒展开。
+对 $\mathrm e^{-1}$ 泰勒展开。
 
 $$
-e^{-1}=\sum_{k=0}^\infty\frac{(-1)^k}{k!}
+\mathrm e^{-1}=\sum_{k=0}^\infty\frac{(-1)^k}{k!}
 $$
 
-那么 $e^{-1}n!-d_n$ 就可以计算了。
+那么 $\mathrm e^{-1}n!-d_n$ 就可以计算了。
 
 $$
 \begin{aligned}
-&e^{-1}n!-d_n\\
+\mathrm e^{-1}n!-d_n
 &=n!(\sum_{k=0}^\infty\frac{(-1)^k}{k!}-\sum_{k=0}^n\frac{(-1)^k}{k!})\\
 &=n!\sum_{k=n+1}^\infty\frac{(-1)^k}{k!}\\
 &=n!\sum_{k=0}^\infty\frac{(-1)^{n+k+1}}{(n+k+1)!}\\
@@ -70,12 +70,12 @@ $$
 $$
 \begin{aligned}
 0<\sum_{k=0}^\infty(-1)^k\frac{n!}{(n+k+1)!}<\frac n{n^2-1}\\
-0<|(-1)^{n+1}\sum_{k=0}^\infty(-1)^k\frac{n!}{(n+k+1)!}|<(-1)^{n+1}\frac n{n^2-1}\\
-0<|e^{-1}n!-d_n|<\frac n{n^2-1}\\
+0<\vert(-1)^{n+1}\sum_{k=0}^\infty(-1)^k\frac{n!}{(n+k+1)!}\vert<(-1)^{n+1}\frac n{n^2-1}\\
+0<\vert\mathrm e^{-1}n!-d_n\vert<\frac n{n^2-1}\\
 \end{aligned}
 $$
 
-当 $n\ge3$ 时，$\frac n{n^2-1}<\frac12$ 成立，所以 $0<|e^{-1}n!-d_n|<\frac12$。  
-当 $n=1$ 或 $n=2$ 时，$0<|e^{-1}n!-d_n|<\frac12$ 经计算，也成立。  
-所以 $d_n$ 就是 $e^{-1}n!$ 四舍五入，也就是 $\lfloor e^{-1}n!+\frac12\rfloor$。  
-由此，还可以知道 $\lim\limits_{n\to\infty}\frac{d_n}n=\frac1e$。  
+当 $n\ge3$ 时，$\frac n{n^2-1}<\frac12$ 成立，所以 $0<\vert\mathrm e^{-1}n!-d_n\vert<\frac12$。  
+当 $n=1$ 或 $n=2$ 时，$0<\vert\mathrm e^{-1}n!-d_n\vert<\frac12$ 经计算，也成立。  
+所以 $d_n$ 就是 $\mathrm e^{-1}n!$ 四舍五入，也就是 $\lfloor\mathrm e^{-1}n!+\frac12\rfloor$。  
+由此，还可以知道 $\lim\limits_{n\to\infty}\frac{d_n}n=\frac1{\mathrm e}$。  
