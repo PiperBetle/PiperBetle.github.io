@@ -10,6 +10,8 @@ $f(x)$ 是定义在 $A$ 上的函数。
 如果 $X$ 不为常数，那么 $\min\limits_{x\in A}f(x)<\mathbb E[f(X)]<\max\limits_{x\in A}f(x)$。  
 这样就通过计算期望获得了 $f(x)$ 的一个上界和下界。
 
+---
+
 当且仅当集合 $S$ 满足 $\forall a,b\in S,a+b\not\in S$ 时，称作 $S$ 是 sum-free 的。  
 求证，对于任意一个整数集合 $S$，存在一个 $S$ 的子集为 sum-free 且其大小超过 $\frac{\vert S\vert}3$。  
 
@@ -78,6 +80,8 @@ $$
 
 ### 概率次可加性
 
+拉姆齐数 $R(k,t)$：$R(k,t)$ 的值是最小的 $n$，使得对于 $n$ 个节点的图的每条边进行任意红蓝染色，必然存在每条边都颜色相同的子图 $K_k$ 或 $K_t$。
+
 如果
 
 $$
@@ -106,10 +110,10 @@ $G_{V,E}$ 为 $n$ 个点的竞赛图，$V=[n]$。排列 $\pi$ 是 $[n]$ 的一�
 运用吾妻不等式得到：
 
 $$
-\mathbb P(\operatorname{fit}(G,\pi)>\lambda\sqrt\binom n2)<\exp(-\frac{\lambda^2}2)
+\mathbb P(\operatorname{fit}(G,\pi)>\lambda\sqrt{\binom n2})<\exp(-\frac{\lambda^2}2)
 $$
 
-由于排列有 $n!$ 种，所以只需要 $n!\exp(-\frac{\lambda^2}2)<1$，就能使得事件 $\operatorname{fit}(G,\pi)>\lambda\sqrt\binom n2$ 不发生，就可以得到 $\min\limits_{G_{V,E}}\max\limits_\pi\operatorname{fit}(G,\pi)\le\lambda\sqrt\binom n2$，不妨设 $\alpha=\lambda\sqrt\binom n2<\lambda\sqrt{\frac {n^2}2}$，那么 $\lambda^2>\frac{2\alpha^2}{n^2}$。
+由于排列有 $n!$ 种，所以只需要 $n!\exp(-\frac{\lambda^2}2)<1$，就能使得事件 $\operatorname{fit}(G,\pi)>\lambda\sqrt{\binom n2}$ 不发生，就可以得到 $\min\limits_{G_{V,E}}\max\limits_\pi\operatorname{fit}(G,\pi)\le\lambda\sqrt{\binom n2}$，不妨设 $\alpha=\lambda\sqrt{\binom n2}<\lambda\sqrt{\frac {n^2}2}$，那么 $\lambda^2>\frac{2\alpha^2}{n^2}$。
 
 $$
 n!\exp(-\frac{\lambda^2}2)<n!\exp(-\frac{\alpha^2}{n^2})\xlongequal{选取适当 \alpha使这个=成立}n!n^{-n}<n!\frac1{n!}=1
