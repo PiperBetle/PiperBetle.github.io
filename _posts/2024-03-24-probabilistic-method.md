@@ -97,7 +97,7 @@ $$
 由于 $\mathbb P\left[\bigvee A_S\right]<1$，所有事件发生的概率小于 $1$，即能做到所有事件均不发生，即 $\mathbb P\left[\bigwedge\overline{A_S}\right]>0$，也就是说存在染色方案使得所有 $k$ 元集均为单色。所以 $R(k,k)>n$。
 <p align="right" style="font-size:1.5rem;">■</p>
 
-$G_{V,E}$ 为 $n$ 个点的竞赛图，$V=[n]$。排列 $\pi$ 是 $[n]$ 的一个排列。$\operatorname{fit}(G,\pi)=\#[顺序对]-\#[逆序对]$。  
+$G_{V,E}$ 为 $n$ 个点的竞赛图，$V=[n]$。排列 $\pi$ 是 $[n]$ 的一个排列。$\operatorname{fit}(G,\pi)=\operatorname{count}(顺序对)-\operatorname{count}(逆序对)$。  
 其中，若在排列 $\pi$ 中，$i$ 的出现位置在 $j(i\ne j)$ 之前时，若有向边 $(i,j)\in E$ 则称其为顺序对，否则称其为逆序对。  
 证明：$\min\limits_{G_{V,E}}\max\limits_\pi\operatorname{fit}(G,\pi)<n^{\frac32}\ln^{\frac12}n$
 
