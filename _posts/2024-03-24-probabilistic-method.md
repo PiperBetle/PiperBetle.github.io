@@ -79,7 +79,6 @@ $$
 <p align="right" style="font-size:1.5rem;">■</p>
 
 ### 概率次可加性
-
 拉姆齐数 $R(k,t)$：$R(k,t)$ 的值是最小的 $n$，使得对于 $n$ 个节点的图的每条边进行任意红蓝染色，必然存在每条边都颜色相同的子图 $K_k$ 或 $K_t$。
 
 如果
@@ -183,7 +182,6 @@ $$
 <p align="right" style="font-size:1.5rem;">■</p>
 
 ### 洛瓦兹局部引理
-
 对于坏事件集合 $\lbrace E_1,E_2,\cdots,E_n\rbrace$，其相关图 $G_{V,E}$ 满足 $V=[n]$ 且坏事件 $E_i$ 与坏事件 $\lbrace E_j|(i,j)\not\in E\rbrace$ 独立。相关图的度数为其所有节点度数的最大值。  
 洛瓦兹局部引理（的对称形式）：
 

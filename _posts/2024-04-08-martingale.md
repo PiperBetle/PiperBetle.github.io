@@ -28,7 +28,6 @@ $$
 这样就证明序列 $Z$ 是 $X$ 的鞅。
 
 ### 停时
-
 称非负整随机变量 $T$ 是序列 $Z$ 的停时，如果 $Z_{n+1},Z_{n+2},\cdots$ 与 $Z_1,Z_2,\cdots,Z_n$ 无关。  
 
 鞅停时定理：如果 $Z_0,Z_1,\cdots$ 是关于 $X_1,X_2,\cdots$ 的鞅，$T$ 是 $X_1,X_2,\cdots$ 的停时，如果满足下列三个条件的**其中一个**：
@@ -97,7 +96,6 @@ Solve[ezt - (2 p - 1) et == 0, et]
 ```
 
 ### 瓦尔德等式
-
 $X_1,X_2,\cdots X_n$ 是独立，与 $X$ 同分布的随机变量，$T$ 是这个序列的停时。如果 $\mathbb E[X],\mathbb E[T]\le\infty$，那么
 
 $$
@@ -117,9 +115,6 @@ $$
 $$
 
 ### 吾妻不等式
-
-{% raw %}
-
 $X_0,X_1,\cdots,X_n$ 是一个鞅，如果对于所有 $i\ge1$ 满足
 
 $$
@@ -129,7 +124,7 @@ $$
 那么对于所有 $t\ge0$ 满足
 
 $$
-\mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-2\lambda^2}{{\sum_{i=1}^t}d_i^2}\right)
+\mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-2\lambda^2}{\sum_{i=1}^td_i^2}\right)
 $$
 
 如果取 $B_i=-c_i,d_i=2c_i$ 可以导出一个更常用的结构：
@@ -143,7 +138,7 @@ $$
 那么对于所有 $t\ge0$ 满足
 
 $$
-\mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-\lambda^2}{{2\sum_{i=1}^t}c_i^2}\right)\\
+\mathbb P(\vert X_t-X_0\vert\ge\lambda)\le2\exp\left(\frac{-\lambda^2}{2\sum_{i=1}^tc_i^2}\right)\\
 $$
 
 如果所有的 $c$ 都一样
@@ -159,7 +154,6 @@ $$
 $$
 
 ### 杜布鞅
-
 杜布鞅是用如下方法构造的鞅：$X_0,X_1,\cdots,X_n$ 是随机变量序列，$Y$ 是随机变量且 $\mathbb E[Y]<\infty$，$Z_i=\mathbb E[Y\vert X_0,X_1,\cdots,X_i]$。  
 证明 $Z_i$ 是鞅：
 
@@ -182,5 +176,3 @@ $$
 $$
 \mathbb P(\vert \chi(G)-\mathbb E[\chi(G)]\vert\ge\lambda\sqrt n)\le2\mathrm e^{-2\lambda}
 $$
-
-{% endraw %}
