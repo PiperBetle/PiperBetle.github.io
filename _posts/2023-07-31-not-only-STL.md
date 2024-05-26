@@ -14,18 +14,18 @@ tags: 语法
 $$
 \begin{array}{|c|c|c|c|c|}
 \hline
-begin & \quad & \quad & \cdots & \quad
+\text{begin} & \quad & \quad & \cdots & \quad
 \\
 \hline
 \end{array}
-~end
+~\text{end}
 $$
 
 $$
-rend~
+\text{rend}~
 \begin{array}{|c|c|c|c|c|}
 \hline
-\quad & \quad & \cdots & \quad & rbegin
+\quad & \quad & \cdots & \quad & \text{rbegin}
 \\
 \hline
 \end{array}
