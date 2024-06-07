@@ -30,7 +30,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial\mathbb E[Y]}{\partial y}&=0\\
+\frac{\partial\mathbb E[Y]}{\partial x}&=0\\
 2-3y&=0\\
 y&=\frac23
 \end{aligned}
