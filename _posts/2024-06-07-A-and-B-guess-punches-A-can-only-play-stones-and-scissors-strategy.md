@@ -39,7 +39,7 @@ $$
 - 甲出石头概率 $\frac23$，剪刀 $\frac13$，期望 $-\frac13$；
 - 乙出石头概率 $\frac23$，布 $\frac13$，期望 $+\frac13$。
 
-值得注意的是，必须提前讨论 $\mathbb P(\texttt{乙出剪刀})=0$。因为概率为 $0$ 后就不需要满足偏导为 $0$ 了。如果不去讨论这个，会得到错误的方程。记 $\mathbb P(\texttt{甲出石头})=x,\mathbb P(\texttt{乙出石头})=y,\mathbb P(\texttt{乙出剪刀})=z$。
+值得注意的是，必须提前讨论 $\mathbb P(\texttt{乙出剪刀})=0$。因为概率为 $0$ 后就不需要满足偏导为 $0$ 了。如果不去讨论这个，会解不出。记 $\mathbb P(\texttt{甲出石头})=x,\mathbb P(\texttt{乙出石头})=y,\mathbb P(\texttt{乙出剪刀})=z$。
 
 $$
 \begin{cases}
