@@ -44,8 +44,8 @@ $\omega_n^0=1$ 是 $n$ 的一个平凡单位根。$\omega_n^1$ 是最常用的�
 ```mma
 n=3
 Graphics[
- Table[Arrow[{{0, 0}, {Re[Solve[x^n == 1, x][[i, 1, 2]]], 
-     Im[Solve[x^n == 1, x][[i, 1, 2]]]}}], {i, 1, n}], Axes -> True]
+ Table[Arrow[{ {0, 0}, {Re[Solve[x^n == 1, x][[i, 1, 2]]], 
+     Im[Solve[x^n == 1, x][[i, 1, 2]]]} }], {i, 1, n}], Axes -> True]
 ```
 
 ### 单位根反演
