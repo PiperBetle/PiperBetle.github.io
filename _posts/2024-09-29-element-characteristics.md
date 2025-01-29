@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "元素大甩卖"
-tags: 化学
+tags: 笔记 化学
 ---
 
 ### $3$ $\mathrm{Li}$ 锂
