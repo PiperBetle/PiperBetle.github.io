@@ -10,7 +10,7 @@ permalink: /symbol/
 |:-:|:-:|:-|
 |$\lfloor x\rfloor$|向下取整|不是四舍五入，也不是向零取整|
 |$\lceil x\rceil$|向上取整|不是四舍五入，也不是向零取整|
-|$[x]$|艾佛森括号|若命题 $x$ 为假，或表达式 $x=0$，则其值为 $1$，否则为 $0$。注意，本博客完全不会把中括号当成小括号上一级的括号|
+|$[x]$|艾佛森括号|若命题 $x$ 为假，或表达式 $x=0$，则其值为 $0$，否则为 $1$。注意，本博客完全不会把中括号当成小括号上一级的括号|
 |$[n]$|$\lbrace1,2,\cdots,n\rbrace$|是一个集合|
 |$[x^n]F(x)$|取系数|值为 $F(x)$ 展开式中 $x^n$ 那项的系数|
 |$\binom nm$|组合数|$n$ 个不同的球数选 $m$ 个的方案数，$\binom nm=\binom{n-1}m+\binom{n-1}{m-1}$|
@@ -20,4 +20,4 @@ permalink: /symbol/
 |$\mathbb P(X)$|事件 $X$ 发生的概率|$0\le\mathbb P(X)\le1$|
 |$\mathbb E[X]$|随机变量（或表达式）$X$ 的期望|其实就是加权平均，不管是离散的还是连续的还是既不离散又不连续的|
 |$Var[X]$|随机变量（或表达式）$X$ 的方差|$Var[X]=\mathbb E[X^2]-\mathbb E^2[X]$|
-|$\operatorname{pop(x)}$|population count|$x$ 二进制下位 $1$ 的数量，有可能会写成 $\operatorname{popcnt}$ 或 $\operatorname{popcount}$
+|$\operatorname{pop(x)}$|population count|$x$ 二进制下位 $1$ 的数量，有可能会写成 $\operatorname{popcnt}$ 或 $\operatorname{popcount}$|
