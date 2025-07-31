@@ -7,11 +7,11 @@ tags: 笔记 算法
 斜率优化：
 
 $$
-f_i=\min_{j<i}f_j+w(i,j)+与j无关的量\\
-w(i,j)=a_ik_j+b_j
+f_i=\min_{j<i}w(i,j)+与j无关的量\\
+w(i,j)=a_ik_j+b_j+f_j
 $$
 
-这样，就相当于之前有若干条线段，斜率为 $k_j$，截距为 $b_j$，使用 lich 树找到之前最小的那根线段即可。  
+这样，就相当于之前有若干条线段，斜率为 $k_j$，截距为 $b_j+f_j$，使用 lich 树找到之前最小的那根线段即可。  
 在有 lich 树的情况下好想又好写。
 
 P3195 [HNOI2008] 玩具装箱
@@ -223,6 +223,46 @@ signed main(){
 		q.emplace_back(i,pos,n);
 	}
 	cout<<f[n];
+	return 0;
+}
+```
+
+bonus：四边形不等式优化区间 dp，可以证明，如果区间 $[l,r-1]$ 的转移点是 $p_1$，$[l+1,r]$ 的转移点是 $p_2$，则 $[l,r]$ 的转移点必然位于 $p_1,p_2$ 之间。
+
+```cpp
+#include<bits/stdc++.h>
+#define siz(x) int((x).size())
+#define all(x) std::begin(x),std::end(x)
+#define fi first
+#define se second
+#define int loli
+using namespace std;
+using unt=unsigned;
+using loli=long long;
+using lolu=unsigned long long;
+using pii=pair<int,int>;
+mt19937_64 rng(random_device{}());
+constexpr int N=307,inf=0x3f3f3f3f;
+int n,a[N],s[N],f[N][N],op[N][N];
+signed main(){
+//	freopen(".in","r",stdin);
+//	freopen(".out","w",stdout);
+	ios::sync_with_stdio(false);cin.tie(nullptr);
+	cin>>n;
+	for(int i=1;i<=n;i++)
+		cin>>a[i],s[i]=s[i-1]+a[i],op[i][i]=i;
+	for(int len=2;len<=n;len++){
+		for(int j=1,i=len;i<=n;j++,i++){
+			f[j][i]=inf;
+			for(int k=op[j][i-1];k<=op[j+1][i];k++){
+				if(f[j][i]>f[j][k]+f[k+1][i]+s[i]-s[j-1]){
+					f[j][i]=f[j][k]+f[k+1][i]+s[i]-s[j-1];
+					op[j][i]=k;
+				}
+			}
+		}
+	}
+	cout<<f[1][n]<<'\n';
 	return 0;
 }
 ```
