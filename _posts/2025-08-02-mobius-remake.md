@@ -344,6 +344,7 @@ $$
 \prod_t\prod_d\left(\frac1t\right)^{\mu(d)\lfloor\frac A{td}\rfloor\lfloor\frac B{td}\rfloor}=\prod_wh^{\lfloor\frac A{td}\rfloor\lfloor\frac B{td}\rfloor}(w)
 $$
 ---
+
 [P5518 [MtOI2019] 幽灵乐团](https://www.luogu.com.cn/problem/P5518)第二部分分
 
 令 $s(n)=\frac{n(n+1)}2$
