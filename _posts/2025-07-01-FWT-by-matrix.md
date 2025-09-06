@@ -8,16 +8,16 @@ tags: 笔记 算法
 
 现在，我们来扩展一下 $\mathrm{dft}$ 的定义，我们无需关心 $\mathrm{dft}$ 是不是什么点值，只需让其满足性质 $\mathrm{dft}A_i\times\mathrm{dft}B_i=\mathrm{dft}C_i$，并且存在 $\mathrm{dft}$ 的逆变换 $\mathrm{dft^{-1}}$，那么我们就认为这是一个广义的 $\mathrm{dft}$。
 
-我们现在用这种变换来解决 $\text{or}$ 卷积，$\text{and}$ 卷积，$\text{xor}$ 卷积等位运算卷积。
+我们现在用这种变换来解决 $\text{and}$ 卷积，$\text{or}$ 卷积，$\text{xor}$ 卷积等位运算卷积。
 
-$\text{or}$ 卷积 $C=A\wedge B$ 的定义：
+$\text{and}$ 卷积 $C=A\wedge B$ 的定义：
 $$
 C_k=\sum_{i\wedge j=k}A_iB_j
 $$
 
-$\text{and}$ 卷积 $C=A\vee B$ 的定义：
+$\text{or}$ 卷积 $C=A\vee B$ 的定义：
 $$
-C_k=\sum_{i\vee j=k}A_iB_j\\
+C_k=\sum_{i\vee j=k}A_iB_j
 $$
 
 $\text{xor}$ 卷积 $C=A\oplus B$ 的定义：

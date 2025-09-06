@@ -175,7 +175,9 @@ $$
 $$
 \sum_{t\in\mathbb P}\sum_d\mu(d)\left\lfloor\frac n{td}\right\rfloor\left\lfloor\frac m{td}\right\rfloor=\sum_wh(w)\left\lfloor\frac n{w}\right\rfloor\left\lfloor\frac m{w}\right\rfloor
 $$
+
 ---
+
 来看直接求 $\gcd$ 和的情况。
 $$
 \begin{aligned}
@@ -191,7 +193,9 @@ $i*\mu=\varphi$，那么原式就是
 $$
 \sum_tt\sum_d\mu(d)\left\lfloor\frac n{td}\right\rfloor\left\lfloor\frac m{td}\right\rfloor=\sum_w\varphi(w)\left\lfloor\frac n{w}\right\rfloor\left\lfloor\frac m{w}\right\rfloor
 $$
+
 ---
+
 [P1829 [国家集训队] Crash的数字表格 / JZPTAB](https://www.luogu.com.cn/problem/P1829)
 
 来看直接求 $\operatorname{lcm}$ 和的情况。
@@ -210,7 +214,9 @@ $$
 $$
 \sum_tt\sum_dd^2\mu(d)\sum_{i=1}^{\lfloor\frac n{td}\rfloor}i\sum_{j=1}^{\lfloor\frac m{td}\rfloor}j=\sum_wh(w)s\left(\left\lfloor\frac nw\right\rfloor\right)s\left(\left\lfloor\frac mw\right\rfloor\right)
 $$
+
 ---
+
 https://codeforces.com/group/MIyYz3rj9b/contest/621587/problem/C
 
 给定 $n$ 个数 $a_i(a_i\le3\times10^5)$，对于每个数 $a_i$ 求出 $n$ 个数中与 $a_i$ 互质的最大的数。  
