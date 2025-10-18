@@ -93,10 +93,10 @@ $$
 ---
 
 不妨引入狄利克雷卷积来简化描述。  
-对于数论函数 $f,g$，定义其狄利克雷卷积 $f*g$ 为
+对于数论函数 $f,g$，定义其狄利克雷卷积 $f\ast g$ 为
 
 $$
-(f*g)(n)=\sum_{d\mid n}f(d)g(\frac nd)
+(f\ast g)(n)=\sum_{d\mid n}f(d)g(\frac nd)
 $$
 
 显然狄利克雷卷积满足交换律和结合律。
@@ -109,10 +109,10 @@ $$
 - $\mu(n)$，即莫比乌斯函数
 
 莫比乌斯反演的本质就是在狄利克雷卷积中，$1,\mu$ 互为逆元。  
-也就是说 $f=g*1\Longleftrightarrow g=\mu*f$。
+也就是说 $f=g\ast 1\Longleftrightarrow g=\mu\ast f$。
 
-我们知道 $i=\varphi*1$，因此 $\varphi=\mu*i$。  
-我们知道 $1=\varepsilon*1$，因此 $\varepsilon=\mu*1$
+我们知道 $i=\varphi\ast 1$，因此 $\varphi=\mu\ast i$。  
+我们知道 $1=\varepsilon\ast 1$，因此 $\varepsilon=\mu\ast 1$
 
 ---
 
@@ -170,7 +170,7 @@ $$
 \end{aligned}
 $$
 
-令 $f(t)=[t\in\mathbb P],h=f*\mu$，那么原式就是
+令 $f(t)=[t\in\mathbb P],h=f\ast \mu$，那么原式就是
 
 $$
 \sum_{t\in\mathbb P}\sum_d\mu(d)\left\lfloor\frac n{td}\right\rfloor\left\lfloor\frac m{td}\right\rfloor=\sum_wh(w)\left\lfloor\frac n{w}\right\rfloor\left\lfloor\frac m{w}\right\rfloor
@@ -179,6 +179,7 @@ $$
 ---
 
 来看直接求 $\gcd$ 和的情况。
+
 $$
 \begin{aligned}
 \sum_{i=1}^n\sum_{j=1}^m\gcd(i,j)&=\sum_tt\sum_{i=1}^n\sum_{j=1}^m[\gcd(i,j)=t]\\
@@ -188,7 +189,7 @@ $$
 \end{aligned}
 $$
 
-$i*\mu=\varphi$，那么原式就是
+$i\ast \mu=\varphi$，那么原式就是
 
 $$
 \sum_tt\sum_d\mu(d)\left\lfloor\frac n{td}\right\rfloor\left\lfloor\frac m{td}\right\rfloor=\sum_w\varphi(w)\left\lfloor\frac n{w}\right\rfloor\left\lfloor\frac m{w}\right\rfloor
@@ -199,6 +200,7 @@ $$
 [P1829 [国家集训队] Crash的数字表格 / JZPTAB](https://www.luogu.com.cn/problem/P1829)
 
 来看直接求 $\operatorname{lcm}$ 和的情况。
+
 $$
 \begin{aligned}
 \sum_{i=1}^n\sum_{j=1}^m\operatorname{lcm}(i,j)&=\sum_{i=1}^n\sum_{j=1}^m\frac{ij}{\gcd(i,j)}\\
@@ -209,7 +211,7 @@ $$
 \end{aligned}
 $$
 
-令 $g(d)=d^2\mu(d),h=i*g,s(n)=\frac{n(n+1)}2$，那么原式就是
+令 $g(d)=d^2\mu(d),h=i\ast g,s(n)=\frac{n(n+1)}2$，那么原式就是
 
 $$
 \sum_tt\sum_dd^2\mu(d)\sum_{i=1}^{\lfloor\frac n{td}\rfloor}i\sum_{j=1}^{\lfloor\frac m{td}\rfloor}j=\sum_wh(w)s\left(\left\lfloor\frac nw\right\rfloor\right)s\left(\left\lfloor\frac mw\right\rfloor\right)
@@ -343,6 +345,7 @@ $$
 $$
 \prod_t\prod_d\left(\frac1t\right)^{\mu(d)\lfloor\frac A{td}\rfloor\lfloor\frac B{td}\rfloor}=\prod_wh^{\lfloor\frac A{td}\rfloor\lfloor\frac B{td}\rfloor}(w)
 $$
+
 ---
 
 [P5518 [MtOI2019] 幽灵乐团](https://www.luogu.com.cn/problem/P5518)第二部分分
